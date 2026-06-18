@@ -1,0 +1,96 @@
+<!DOCTYPE html> <!-- Definiert den Dokumententyp für HTML5, wichtig für moderne Browser. -->
+<html lang="de">
+<head>
+    <meta charset="UTF-8"> <!-- Stellt sicher, dass Sonderzeichen (wie Umlaute) richtig verarbeitet werden. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sorgt für responsive Darstellung auf Smartphones. -->
+    
+    <title>Web-Technologien Praktikum</title>
+
+    <!-- Der <style>-Bereich bindet CSS (Cascading Style Sheets) direkt in die HTML-Datei ein. 
+         Hier wird das visuelle Design der Webseite definiert. -->
+    <style>
+        /* Globale Einstellungen für die gesamte Seite (den <body>). */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Moderne, serifenlose Schriftart für eine cleane Optik. */
+            background-color: #f4f7f6; /* Ein helles, freundliches Grau-Blau als Hintergrund, sanfter als reines Weiß. */
+            color: #333333; /* Dunkelgraue Schrift für hohen Kontrast (angenehmer zu lesen als Tiefschwarz). */
+            
+            /* Flexbox wird genutzt, um den Inhalt perfekt in der Mitte des Bildschirms zu zentrieren. */
+            display: flex; 
+            justify-content: center; /* Horizontale Zentrierung */
+            align-items: center; /* Vertikale Zentrierung */
+            height: 100vh; /* Die Seite nimmt 100% der sichtbaren Bildschirmhöhe (Viewport Height) ein. */
+            margin: 0; /* Entfernt den unsichtbaren Standard-Rand des Browsers. */
+        }
+
+        /* Ein "Container" (Kasten), der unsere Inhalte bündelt und ansprechend präsentiert (Card-Design). */
+        .container {
+            background-color: #ffffff; /* Weißer Hintergrund, hebt sich vom grauen Body-Hintergrund ab. */
+            padding: 40px 50px; /* Großzügiger Innenabstand (oben/unten 40px, links/rechts 50px). */
+            border-radius: 12px; /* Abgerundete Ecken - wirkt sehr modern und einladend. */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Ein weicher Schatten erzeugt eine 3D-Tiefenwirkung. */
+            text-align: center; /* Gesamter Text im Container wird zentriert. */
+            max-width: 500px; /* Begrenzt die Breite auf maximal 500 Pixel, damit Zeilen nicht zu lang werden. */
+            width: 90%; /* Auf kleinen Bildschirmen (Handy) nimmt der Container 90% der Breite ein. */
+        }
+
+        /* Design für die Hauptüberschrift */
+        h1 {
+            color: #2c3e50; /* Ein tiefes Dunkelblau verleiht der Überschrift ein professionelles Aussehen. */
+            margin-top: 0; /* Entfernt den Abstand nach oben. */
+            font-size: 2.2em; /* Macht die Überschrift deutlich größer. */
+        }
+
+        /* Design für normale Absätze */
+        p {
+            line-height: 1.6; /* Ein vergrößerter Zeilenabstand (160%) macht den Text viel besser lesbar. */
+            font-size: 1.1em; /* Minimal größere Schriftgröße. */
+        }
+
+        /* Eine spezielle Klasse ('.highlight') zum farblichen Hervorheben von bestimmtem Text. */
+        .highlight {
+            font-weight: 600; /* Macht den Text etwas fetter (Semi-Bold). */
+            color: #3498db; /* Ein frisches Hellblau als Akzentfarbe. */
+            margin-top: 25px; /* Etwas mehr Abstand nach oben. */
+        }
+
+        /* Design für die Trennlinie */
+        hr {
+            border: none; /* Entfernt den hässlichen Standard-Rahmen. */
+            height: 1px; /* Die Linie wird exakt 1 Pixel dünn. */
+            background: linear-gradient(to right, transparent, #dddddd, transparent); /* Die Linie verläuft weich von unsichtbar zu grau zu unsichtbar. */
+            margin: 30px 0; /* Abstand oberhalb und unterhalb der Linie. */
+        }
+
+        /* Design für den Fußnoten-Text */
+        .footnote {
+            color: #95a5a6; /* Ein helleres Grau signalisiert, dass diese Info (die Fußnote) sekundär ist. */
+            font-style: italic; /* Kursive Schriftweise. */
+            font-size: 0.85em; /* Macht den Text kleiner. */
+            margin-bottom: 0; /* Entfernt den Abstand nach unten. */
+        }
+    </style>
+</head>
+<body>
+    <!-- Ein <div> (Division/Container) gruppiert die HTML-Elemente. 
+         Über das Attribut 'class="container"' weiß das CSS im <head>, dass es diesen Kasten stylen soll. -->
+    <div class="container">
+        
+        <!-- Hauptüberschrift -->
+        <h1>Herzlich Willkommen</h1>
+
+        <!-- Erster Absatz -->
+        <p>Dies ist die Startseite einer Web-Anwendung zum Web-Technologien Praktikum.</p>
+
+        <!-- Zweiter Absatz, versehen mit einer Klasse für das blaue, fettgedruckte Design. -->
+        <p class="highlight">Noch ist hier nicht viel zu sehen*</p>
+
+        <!-- Horizontale Trennlinie, jetzt mit schönem Verlauf durch das CSS. -->
+        <hr>
+        
+        <!-- Die Fußnote. Anstelle von <small> und <i> nutzen wir jetzt die CSS-Klasse "footnote". -->
+        <p class="footnote">*Aber das wird sich bald ändern.</p>
+        
+    </div>
+</body>
+</html>

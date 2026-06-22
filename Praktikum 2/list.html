@@ -1,37 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste der Kategorien</title>
-</head>
-<body>
-    <!-- Kommentar-->
-
-    <h1>Tutorial App - List.html</h1>   <!--Überschrift-->
-    <hr>    <!--Strich-->
-    <h2>Die atzigsten Kategorien im Überblick</h2>  <!--unter-Überschrift-->
-    <p> <!--Paragraph: Fasst einen Textblock und ist durch Absätze abgesetz-->
-        Alle verfügbaren <strong title="zum Auswählen anklicken"> Kategorien:</strong>
-    </p>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kategorien</title>
+  </head>
+  <body>
+    <header>
+      <h1>Die Beste Tutorial-App</h1>
+    </header>
+    <nav>
+      <a href="list.html">Liste der Kategorien</a>
+      | <a href="tutorials.html">Tutorials der Kategorie "..."</a> |
+      <a href="tutorial.html">Details zum Tutorial</a>
+    </nav>
+    <h2>Die atzigsten Kategorien im Überblick</h2>
     <p>
-        <ol>    <!--ordered List-->
-            <li>
-                <nav>
-                    <a href="tutorials.html#kat1">Name Kategorie 1</a>
-                </nav>
-            </li>   <!--Name der Kategorie mit relativem Hyperlink-->
-            <li>
-                <nav>
-                    <a href="tutorials.html#kat2">Name Kategorie 2</a>
-                </nav>
-            </li>
-            <li>
-                <nav>
-                    <a href="tutorials.html#kat3">Name Kategorie 3</a>
-                </nav>
-            </li>
-        </ol>
+      Alle verfügbaren
+      <strong title="zum Auswählen anklicken"> Kategorien:</strong>
     </p>
-</body>
+
+    <div>
+      <ol>
+        <li>
+          <a href="tutorials.html#kat1">Name Kategorie 1</a>
+        </li>
+        <li>
+          <a href="tutorials.html#kat2">Name Kategorie 2</a>
+        </li>
+        <li>
+          <a href="tutorials.html#kat3">Name Kategorie 3</a>
+        </li>
+      </ol>
+    </div>
+    <aside>
+      <h2>Neue Tutorials</h2>
+      <ul>
+        <li>Snapchat vermeiden, die besten Tipps</li>
+        <li>Java der Einsteigerkurs für Profis</li>
+      </ul>
+    </aside>
+    <footer>
+      <hr />
+      <small>&copy;2026 WebTech</small>
+    </footer>
+  </body>
 </html>

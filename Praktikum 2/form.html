@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formular</title>
+  </head>
+  <body>
+    <div>
+      <form action="list.html" method="get">
+        <label
+          >Titel:
+          <input
+            name="name"
+            maxlength="20"
+            minlength="4"
+            required
+            id="name"
+            placeholder="Titel des Tutorials"
+            pattern="[A-Z].*"
+          />
+        </label>
+
+        <label
+          >Sprache:
+          <select id="language">
+            <option value="none">-</option>
+            <option value="de">Deutsch</option>
+            <option value="en">Englisch</option>
+            <option value="es">Spanisch</option>
+            <option value="fr">Französisch</option>
+          </select>
+        </label>
+
+        <label
+          >Kategorie:
+          <input minlength="1" pattern="[a-z], *" />
+          <!--Was geht hier falsch?-->
+        </label>
+      </form>
+    </div>
+  </body>
+</html>

@@ -6,6 +6,12 @@
   </head>
   <body>
     <header>
+      <img
+        src="/Bilder/Logo.png"
+        width="150"
+        height="150"
+        alt="Logo Tutorial-App"
+      />
       <h1>Die Beste Tutorial-App</h1>
     </header>
     <nav>
@@ -14,6 +20,21 @@
       <a href="tutorial.html">Details zum Tutorial</a>
     </nav>
     <h2>Die atzigsten Kategorien im Überblick</h2>
+    <form action="list.html" method="get">
+      <p>
+        <label for="title">Titel: </label
+        ><input
+          name="search"
+          maxlength="20"
+          minlength="4"
+          required
+          id="title"
+          placeholder="CSS Tutorials"
+          pattern="[A-Z]"
+        />
+        <input type="submit" value="Suchen" />
+      </p>
+    </form>
     <p>
       Alle verfügbaren
       <strong title="zum Auswählen anklicken"> Kategorien:</strong>
@@ -22,21 +43,46 @@
     <div>
       <ol>
         <li>
-          <a href="tutorials.html#kat1">Name Kategorie 1</a>
+          <a href="tutorials.html#kat1"
+            ><img
+              src="/Bilder/CSS.png"
+              width="100"
+              height="100"
+              alt="CSS Tutorials"
+          /></a>
+          <a href="tutorials.html#kat1">CSS Tutorials</a>
         </li>
         <li>
-          <a href="tutorials.html#kat2">Name Kategorie 2</a>
+          <a href="tutorials.html#kat2"
+            ><img
+              src="/Bilder/Java.png"
+              width="100"
+              height="100"
+              alt="Java Tutorials"
+          /></a>
+          <a href="tutorials.html#kat2">Java Tutorials</a>
         </li>
         <li>
-          <a href="tutorials.html#kat3">Name Kategorie 3</a>
+          <a href="tutorials.html#kat3"
+            ><img
+              src="/Bilder/TypeScript.png"
+              width="100"
+              height="100"
+              alt="TypeScript Tutorials"
+          /></a>
+          <a href="tutorials.html#kat3">TypeScript Tutorials</a>
         </li>
       </ol>
     </div>
     <aside>
       <h2>Neue Tutorials</h2>
       <ul>
-        <li>Snapchat vermeiden, die besten Tipps</li>
-        <li>Java der Einsteigerkurs für Profis</li>
+        <li>
+          Snapchat vermeiden, die besten Tipps, vom 18.06.2026, Dauer: 1 Stunde
+        </li>
+        <li>
+          Java der Einsteigerkurs für Profis, vom 18.06.2026, Dauer: 1 Stunde
+        </li>
       </ul>
     </aside>
     <footer>

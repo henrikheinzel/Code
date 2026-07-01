@@ -36,6 +36,24 @@
           <input minlength="1" pattern="[a-z], *" />
           <!--Was geht hier falsch?-->
         </label>
+
+        <label>
+          Beschreibung: 
+          <input minlength="40"/> <!--Mehrzeilige Eingabe-->
+        </label>
+        <label>
+          Dauer: 
+          <input type="date" name="duration" required min="20" max="959"> <!--Pattern fehlt 959 Sekunden-->
+        </label>
+        <label>
+          Veröffentlichung: 
+          <input required/> <!--Datum auswahl Dingens-->
+        </label>
+        <label>
+          Inhalt: 
+          <input type="text"> <!--Ergänzen-->
+          <input required/>
+        </label>
       </form>
     </div>
   </body>

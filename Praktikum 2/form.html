@@ -5,55 +5,111 @@
     <title>Formular</title>
   </head>
   <body>
+    <header>
+      <img
+        src="/Bilder/Logo.png"
+        width="150"
+        height="150"
+        alt="Logo Tutorial-App"
+      />
+      <h1>Die Beste Tutorial-App</h1>
+    </header>
+    <nav>
+      <a href="list.html">Liste der Kategorien</a>
+      | <a href="tutorials.html">Tutorials der Kategorie "..."</a> |
+      <a href="tutorial.html">Details zum Tutorial</a> |
+      <a href="form.html">Neues Tutorial erstellen</a>
+    </nav>
     <div>
-      <form action="list.html" method="get">
-        <label
-          >Titel:
-          <input
-            name="name"
-            maxlength="20"
-            minlength="4"
-            required
-            id="name"
-            placeholder="Titel des Tutorials"
-            pattern="[A-Z].*"
-          />
-        </label>
-
-        <label
-          >Sprache:
-          <select id="language">
+      <form
+        action="https://edu.inf.fh-dortmund.de/tutorialService/testCreateTutorial.php"
+        method="post"
+      >
+        <p>
+          <label
+            >Titel:
+            <input
+              name="name"
+              maxlength="20"
+              minlength="4"
+              required
+              id="name"
+              placeholder="Titel des Tutorials"
+              pattern="[A-Z].*"
+            />
+          </label>
+        </p>
+        <p>
+          Sprache:
+          <select name="language">
             <option value="none">-</option>
             <option value="de">Deutsch</option>
             <option value="en">Englisch</option>
             <option value="es">Spanisch</option>
             <option value="fr">Französisch</option>
           </select>
-        </label>
-
-        <label
-          >Kategorie:
-          <input minlength="1" pattern="[a-z], *" />
-          <!--Was geht hier falsch?-->
-        </label>
-
-        <label>
-          Beschreibung: 
-          <input minlength="40"/> <!--Mehrzeilige Eingabe-->
-        </label>
-        <label>
-          Dauer: 
-          <input type="date" name="duration" required min="20" max="959"> <!--Pattern fehlt 959 Sekunden-->
-        </label>
-        <label>
-          Veröffentlichung: 
-          <input required/> <!--Datum auswahl Dingens-->
-        </label>
-        <label>
-          Inhalt: 
-          <input type="text"> <!--Ergänzen-->
-          <input required/>
-        </label>
+        </p>
+        <p>
+          <label
+            >Kategorie:
+            <input
+              required
+              name="categories"
+              minlength="1"
+              id="categorie"
+              placeholder="z.B.: Projektmanagement, etc."
+              size="22"
+            />
+          </label>
+        </p>
+        <p>
+          <label>
+            Beschreibung:
+            <textarea
+              name="description"
+              minlength="40"
+              rows="2"
+              cols="30"
+              placeholder="kurze Beschreibung des Tutorials"
+            ></textarea>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input
+              type="text"
+              name="duration"
+              required
+              placeholder="MM:SS"
+              value="00:20"
+              pattern="(00:[2-5][0-9]|0[1-9]:[0-5][0-9]|1[0-5]:[0-5][0-9])"
+              title="Bitte eine Dauer zwischen 00:20 und 15:59 im Format MM:SS eingeben."
+            />
+          </label>
+        </p>
+        <p>
+          Veröffentlichung:
+          <input type="date" name="date" required />
+        </p>
+        <p>
+          Inhalt: <br />
+          <input type="radio" name="type" value="text" required />Text-Tutorial
+          <input
+            type="radio"
+            name="type"
+            value="video"
+            required
+          />Video-Tutorial
+          <br />
+          <textarea
+            required
+            name="content"
+            placeholder="Inhalt des Tutorials"
+            rows="10"
+            cols="40"
+          ></textarea>
+        </p>
+        <input type="submit" value="Erstellen" />
       </form>
     </div>
   </body>

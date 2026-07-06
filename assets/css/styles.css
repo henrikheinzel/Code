@@ -1,0 +1,44 @@
+/* Farben in abgestufter Reihenfolge (Teal)
+#63b7b7
+#82c5c5
+#a1d4d4
+#c1e2e2
+#e0f1f1
+*/
+
+h1 {
+  color: #63b7b7;
+}
+h2 {
+  color: #82c5c5;
+}
+h3 {
+  color: #a1d4d4;
+}
+body {
+  background-color: #e0f1f1;
+  font-family: sans-serif;
+}
+nav a:hover {
+  background-color: #82c5c5;
+  color: #e0f1f1;
+  font-weight: bold;
+}
+a {
+  font-weight: bold;
+  font-size: larger;
+  color: black;
+}
+.hervorgehoben {
+  background-color: #63b7b7;
+}
+.hervorgehoben h2 {
+  color: #a1d4d4;
+}
+tr:nth-of-type(odd) {
+  background-color: #a1d4d4;
+}
+th,
+tr:last-child {
+  background-color: #63b7b7;
+}

@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <title>Formular</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/forms.css">
   </head>
   <body>
     <header>
       <img
-        src="/Bilder/Logo.png"
+        src="/assets/img/Logo.png"
         width="150"
         height="150"
         alt="Logo Tutorial-App"
@@ -26,6 +26,8 @@
         action="https://edu.inf.fh-dortmund.de/tutorialService/testCreateTutorial.php"
         method="post"
       >
+      <fieldset>
+        <legend class="legende">Kerninformationen</legend>
         <p>
           <label
             >Titel:
@@ -75,8 +77,12 @@
             ></textarea>
           </label>
         </p>
+        </fieldset>
+        <fieldset>
+          <legend class="legende">zeitliche Rahmenbedingungen und Inhalt</legend>
         <p>
           <label>
+            Dauer: 
             <input
               type="text"
               name="duration"
@@ -89,8 +95,10 @@
           </label>
         </p>
         <p>
+          <label>
           Veröffentlichung:
           <input type="date" name="date" required />
+          </label>
         </p>
         <p>
           Inhalt: <br />
@@ -110,7 +118,8 @@
             cols="40"
           ></textarea>
         </p>
-        <input type="submit" value="Erstellen" />
+      </fieldset>
+        <input type="submit" value="Erstellen" id="erstellen"/>
       </form>
     </div>
   </body>

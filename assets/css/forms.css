@@ -1,0 +1,46 @@
+/* Farben in abgestufter Reihenfolge (Teal)
+#63b7b7
+#82c5c5
+#a1d4d4
+#c1e2e2
+#e0f1f1
+*/
+input {
+    border: none;
+}
+input:required{
+    border-left: 2px solid black;
+}
+input:invalid, textarea:invalid {
+    border-bottom: 1px solid red;
+    /* background-color: rgb(248, 211, 211); */
+}
+
+p:has(:required)::after {
+    content: " (Erforderliches Feld)";
+}
+
+#erstellen {
+    border-radius: 5px;
+    background-color: #e0f1f1;
+    border-color: #63b7b7;
+    font-size: larger;
+    color: #3e7575;
+}
+.legende {
+    background-color: #63b7b7;
+    color: white;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 20px;
+    font-weight: bold;
+}
+fieldset {
+    border: none;
+    border-top: 1px solid black;
+}
+
+body {
+    font-family: sans-serif;
+}

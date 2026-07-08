@@ -1,0 +1,19 @@
+.maincontainer {
+  display: flex;
+}
+
+main {
+  flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: 80%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+aside {
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: 300px;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 5px;
+}

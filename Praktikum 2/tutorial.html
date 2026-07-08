@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Syntax Tutorial</title>
     <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/flexbox.css" />
   </head>
   <body>
     <header>
@@ -22,73 +23,81 @@
       <a href="tutorial.html">Details zum Tutorial</a> |
       <a href="form.html">Neues Tutorial erstellen</a>
     </nav>
-    <article>
-      <figure class="bildrechts">
-        <img
-          src="/assets/img/JavaSyntax.png"
-          width="200"
-          height="200"
-          alt="JavaSyntax"
-          title="Abbildung mit Bildunterschrift"
-        />
-        <figcaption>Abbildung mit Bildunterschrift</figcaption>
-      </figure>
-      <h2>Java Syntax</h2>
-      <p>Erschienen am: 18.06. | Dauer: 10 Sekunden | Java Syntax HowTo</p>
-      <p>
-        <video
-          src="/assets/vid/JavaSyntax.mp4"
-          width="800"
-          controls
-          class="clearfix"
-        >
-          Videoformat nicht unterstützt.
-        </video>
-      </p>
-      <table>
-        <tr>
-          <th>Kapitel</th>
-          <th>Kurzbeschreibung</th>
-          <th>Dauer</th>
-        </tr>
-        <tr>
-          <td>Einleitung</td>
-          <td>Einleitende Worte zum Thema</td>
-          <td>1 Sek</td>
-        </tr>
-        <tr>
-          <td>Die Klasse definiert das Spiel</td>
-          <td>class {}</td>
-          <td>3 Sek</td>
-        </tr>
-        <tr>
-          <td>Was laeuft ohne Semikolon?</td>
-          <td>Nichts.</td>
-          <td>3 Sek</td>
-        </tr>
-        <tr>
-          <td>Abschließende Worte</td>
-          <td>Don't forget the ;</td>
-          <td>3 Sek</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td>10 Sek</td>
-        </tr>
-      </table>
-    </article>
-    <aside class="hervorgehoben">
-      <h2>Neue Tutorials</h2>
-      <ul>
-        <li>
-          Snapchat vermeiden, die besten Tipps, vom 18.06.2026, Dauer: 1 Stunde
-        </li>
-        <li>
-          Java der Einsteigerkurs für Profis, vom 18.06.2026, Dauer: 1 Stunde
-        </li>
-      </ul>
-    </aside>
+    <div class="maincontainer">
+      <main>
+        <article>
+          <figure class="bildrechts">
+            <img
+              src="/assets/img/JavaSyntax.png"
+              width="200"
+              height="200"
+              alt="JavaSyntax"
+              title="Abbildung mit Bildunterschrift"
+            />
+            <figcaption>Abbildung mit Bildunterschrift</figcaption>
+          </figure>
+
+          <h2>Java Syntax</h2>
+          <p>Erschienen am: 18.06. | Dauer: 10 Sekunden | Java Syntax HowTo</p>
+        </article>
+        <article class="clearfix">
+          <p>
+            <video
+              src="/assets/vid/JavaSyntax.mp4"
+              width="800"
+              controls
+              class="clearfix"
+            >
+              Videoformat nicht unterstützt.
+            </video>
+          </p>
+          <table>
+            <tr>
+              <th>Kapitel</th>
+              <th>Kurzbeschreibung</th>
+              <th>Dauer</th>
+            </tr>
+            <tr>
+              <td>Einleitung</td>
+              <td>Einleitende Worte zum Thema</td>
+              <td>1 Sek</td>
+            </tr>
+            <tr>
+              <td>Die Klasse definiert das Spiel</td>
+              <td>class {}</td>
+              <td>3 Sek</td>
+            </tr>
+            <tr>
+              <td>Was laeuft ohne Semikolon?</td>
+              <td>Nichts.</td>
+              <td>3 Sek</td>
+            </tr>
+            <tr>
+              <td>Abschließende Worte</td>
+              <td>Don't forget the ;</td>
+              <td>3 Sek</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>10 Sek</td>
+            </tr>
+          </table>
+        </article>
+      </main>
+      <aside class="hervorgehoben">
+        <h2>Neue Tutorials</h2>
+        <ul>
+          <li>
+            Snapchat vermeiden, die besten Tipps, vom 18.06.2026, Dauer: 1
+            Stunde
+          </li>
+          <li>
+            Java der Einsteigerkurs für Profis, vom 18.06.2026, Dauer: 1 Stunde
+          </li>
+        </ul>
+      </aside>
+    </div>
     <footer>
       <hr />
       <small>&copy;2026 WebTech</small>

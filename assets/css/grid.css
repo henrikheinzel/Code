@@ -1,0 +1,25 @@
+.maincontainer2 {
+  display: grid;
+  grid-template-areas: "kopf kopf kopf"
+                        "navi navi navi"
+                        "haupt haupt seite"
+                        "fuss fuss fuss";
+}
+header {
+  grid-area: kopf;
+}
+aside {
+  grid-area: seite;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 5px;
+}
+nav {
+  grid-area: navi;
+}
+footer {
+    grid-area: fuss;
+}
+main {
+  grid-area: haupt;
+}

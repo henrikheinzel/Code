@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Formular</title>
     <link rel="stylesheet" href="/assets/css/forms.css">
     <link rel="stylesheet" href="/assets/css/styles.css" />
@@ -66,6 +66,7 @@
               id="categorie"
               placeholder="z.B.: Projektmanagement, etc."
               size="22"
+              pattern="[^,\s]+(\s*,\s*[^,\s]+)*"
             />
           </label>
         </p>

@@ -17,3 +17,15 @@ aside {
   border-radius: 5px;
   padding: 5px;
 }
+
+@media (max-width: 768px) {
+  #maincontainer {
+    flex-direction: column;
+  }
+  aside {
+    flex-basis: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: auto;
+  }
+}

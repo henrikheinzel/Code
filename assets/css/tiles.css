@@ -1,5 +1,37 @@
 #container1 {
     display: flex;
-    flex-flow: wrap;
+    flex-flow: row wrap;
     justify-content: space-evenly;
+    padding: 10px;
+    margin: 5px;
 }
+.kachel-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin: 5px;
+    list-style-type: none;
+}
+
+.kachel{
+    border: 2px solid;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 150px;
+    width: 150px;
+
+  box-shadow: 3px 3px 5px 1px gray;
+}
+.kachel a{
+    display: block;
+    text-decoration: none;
+}
+

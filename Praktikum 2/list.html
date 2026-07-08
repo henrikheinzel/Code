@@ -5,6 +5,7 @@
     <title>Kategorien</title>
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/flexbox.css" />
+    <link rel="stylesheet" href="/assets/css/tiles.css" />
   </head>
   <body>
     <header>
@@ -23,7 +24,7 @@
       <a href="tutorial.html">Details zum Tutorial</a> |
       <a href="form.html">Neues Tutorial erstellen</a>
     </nav>
-    <div class="maincontainer">
+    <div id="maincontainer">
       <main>
         <h2>Die atzigsten Kategorien im Überblick</h2>
         <form
@@ -49,39 +50,53 @@
           Alle verfügbaren
           <strong title="zum Auswählen anklicken"> Kategorien:</strong>
         </p>
+        <div id="container1">
+          <ol class="kachel-container">
+            <li class="kachel">
+              <a href="tutorials.html#kat1"
+                ><img
+                  src="/assets/img/CSS.png"
+                  width="100"
+                  height="100"
+                  alt="CSS Tutorials"
+              /></a>
+              <a href="tutorials.html#kat1">CSS Tutorials</a>
+            </li>
 
-        <ol>
-          <li>
-            <a href="tutorials.html#kat1"
-              ><img
-                src="/assets/img/CSS.png"
-                width="100"
-                height="100"
-                alt="CSS Tutorials"
-            /></a>
-            <a href="tutorials.html#kat1">CSS Tutorials</a>
-          </li>
-          <li>
-            <a href="tutorials.html#kat2"
-              ><img
-                src="/assets/img/Java.png"
-                width="100"
-                height="100"
-                alt="Java Tutorials"
-            /></a>
-            <a href="tutorials.html#kat2">Java Tutorials</a>
-          </li>
-          <li>
-            <a href="tutorials.html#kat3"
-              ><img
-                src="/assets/img/TypeScript.png"
-                width="100"
-                height="100"
-                alt="TypeScript Tutorials"
-            /></a>
-            <a href="tutorials.html#kat3">TypeScript Tutorials</a>
-          </li>
-        </ol>
+            <li class="kachel">
+              <a href="tutorials.html#kat2"
+                ><img
+                  src="/assets/img/Java.png"
+                  width="100"
+                  height="100"
+                  alt="Java Tutorials"
+              /></a>
+              <a href="tutorials.html#kat2">Java Tutorials</a>
+            </li>
+
+            <li class="kachel">
+              <a href="tutorials.html#kat3"
+                ><img
+                  src="/assets/img/TypeScript.png"
+                  width="100"
+                  height="100"
+                  alt="TypeScript Tutorials"
+              /></a>
+              <a href="tutorials.html#kat3">TypeScript Tutorials</a>
+            </li>
+            
+            <li class="kachel">
+              <a href="tutorials.html#kat3"
+                ><img
+                  src="/assets/img/TypeScript.png"
+                  width="100"
+                  height="100"
+                  alt="TypeScript Tutorials"
+              /></a>
+              <a href="tutorials.html#kat3">TypeScript Tutorials</a>
+            </li>
+          </ol>
+        </div>
       </main>
       <aside class="hervorgehoben">
         <h2>Neue Tutorials</h2>

@@ -29,3 +29,11 @@ aside {
     width: auto;
   }
 }
+@media screen and (max-width: 480px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}

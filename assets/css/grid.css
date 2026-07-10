@@ -1,9 +1,10 @@
 .maincontainer2 {
   display: grid;
-  grid-template-areas: "kopf kopf kopf"
-                        "navi navi navi"
-                        "haupt haupt seite"
-                        "fuss fuss fuss";
+  grid-template-areas:
+    "kopf kopf kopf"
+    "navi navi navi"
+    "haupt haupt seite"
+    "fuss fuss fuss";
 }
 header {
   grid-area: kopf;
@@ -18,8 +19,28 @@ nav {
   grid-area: navi;
 }
 footer {
-    grid-area: fuss;
+  grid-area: fuss;
 }
 main {
   grid-area: haupt;
+}
+@media screen and (max-width: 768px) {
+  .maincontainer2 {
+    grid-template-areas:
+      "kopf"
+      "navi"
+      "haupt"
+      "seite"
+      "fuss";
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
 }

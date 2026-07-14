@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/flexbox.css" />
     <link rel="stylesheet" href="/assets/css/tiles.css" />
+    <link rel="stylesheet" href="/assets/css/forms.css">
   </head>
   <body>
     <header>
@@ -32,20 +33,23 @@
           action="https://edu.inf.fh-dortmund.de/tutorialService/testTutorialSearch.php"
           method="get"
         >
-          <p>
-            <label
-              >Titel suchen:
-              <input
-                name="search"
-                maxlength="20"
-                minlength="4"
-                required
-                placeholder="CSS Tutorials"
-                pattern="[A-Z].*"
-              />
-            </label>
-            <input type="submit" value="Suchen" />
-          </p>
+          <fieldset>
+            <legend class="legende">Suchen</legend>
+            <p>
+              <label
+                >Titel suchen:
+                <input
+                  name="search"
+                  maxlength="20"
+                  minlength="4"
+                  required
+                  placeholder="CSS Tutorials"
+                  pattern="[A-Z].*"
+                />
+              </label>
+              <input type="submit" value="Suchen" />
+            </p>
+          </fieldset>
         </form>
         <p>
           Alle verfügbaren

@@ -28,6 +28,9 @@ aside {
     margin-right: 5px;
     width: auto;
   }
+  h1 {
+    font-size: 130%;
+  }
 }
 @media screen and (max-width: 480px) {
   nav {
@@ -35,5 +38,8 @@ aside {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+  }
+  h1 {
+    display: none; 
   }
 }

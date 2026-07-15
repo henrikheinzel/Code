@@ -35,3 +35,9 @@
     text-decoration: none;
 }
 
+.kachel:hover {
+    transform: translateY(-5px); 
+    box-shadow: 5px 8px 12px 2px gray; 
+    border-color: #63b7b7; 
+    cursor: pointer;
+}

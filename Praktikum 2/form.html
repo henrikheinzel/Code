@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formular</title>
-    <link rel="stylesheet" href="/assets/css/forms.css">
+    <link rel="stylesheet" href="/assets/css/forms.css" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/grid.css" />
   </head>
@@ -25,108 +25,119 @@
       <a href="tutorial.html">Details zum Tutorial</a> |
       <a href="form.html">Neues Tutorial erstellen</a>
     </nav>
-    <br>
+    <br />
     <div>
       <form
         action="https://edu.inf.fh-dortmund.de/tutorialService/testCreateTutorial.php"
         method="post"
       >
-      <fieldset>
-        <legend class="legende">Kerninformationen</legend>
-        <p>
-          <label
-            >Titel:
-            <input
-              name="name"
-              maxlength="20"
-              minlength="4"
-              required
-              id="name"
-              placeholder="Titel des Tutorials"
-              pattern="[A-Z].*"
-            />
-          </label>
-        </p>
-        <p>
-          Sprache:
-          <select name="language">
-            <option value="none">-</option>
-            <option value="de">Deutsch</option>
-            <option value="en">Englisch</option>
-            <option value="es">Spanisch</option>
-            <option value="fr">Französisch</option>
-          </select>
-        </p>
-        <p>
-          <label
-            >Kategorie:
-            <input
-              required
-              name="categories"
-              minlength="1"
-              id="categorie"
-              placeholder="z.B.: Projektmanagement, etc."
-              size="22"
-              pattern="[^,\s]+(\s*,\s*[^,\s]+)*"
-            />
-          </label>
-        </p>
-        <p>
-          <label>
-            Beschreibung:
-            <textarea
-              name="description"
-              minlength="40"
-              rows="2"
-              cols="30"
-              placeholder="kurze Beschreibung des Tutorials"
-            ></textarea>
-          </label>
-        </p>
+        <fieldset>
+          <legend class="legende">Kerninformationen</legend>
+          <p>
+            <label
+              >Titel:
+              <input
+                name="name"
+                maxlength="20"
+                minlength="4"
+                required
+                id="name"
+                placeholder="Titel des Tutorials"
+                pattern="[A-Z].*"
+              />
+            </label>
+          </p>
+          <p>
+            Sprache:
+            <select name="language">
+              <option value="none">-</option>
+              <option value="de">Deutsch</option>
+              <option value="en">Englisch</option>
+              <option value="es">Spanisch</option>
+              <option value="fr">Französisch</option>
+            </select>
+          </p>
+          <p>
+            <label
+              >Kategorie:
+              <input
+                required
+                name="categories"
+                minlength="1"
+                id="categorie"
+                placeholder="z.B.: Projektmanagement, etc."
+                size="22"
+                pattern="[^,\s]+(\s*,\s*[^,\s]+)*"
+              />
+            </label>
+          </p>
+          <p>
+            <label>
+              Beschreibung:
+              <textarea
+                name="description"
+                minlength="40"
+                rows="2"
+                cols="30"
+                placeholder="kurze Beschreibung des Tutorials"
+              ></textarea>
+            </label>
+          </p>
         </fieldset>
         <fieldset>
-          <legend class="legende">zeitliche Rahmenbedingungen und Inhalt</legend>
-        <p>
-          <label>
-            Dauer: 
+          <legend class="legende">
+            zeitliche Rahmenbedingungen und Inhalt
+          </legend>
+          <p>
+            <label>
+              Dauer:
+              <input
+                type="text"
+                name="duration"
+                required
+                placeholder="MM:SS"
+                value="00:20"
+                pattern="(00:[2-5][0-9]|0[1-9]:[0-5][0-9]|1[0-5]:[0-5][0-9])"
+                title="Bitte eine Dauer zwischen 00:20 und 15:59 im Format MM:SS eingeben."
+              />
+            </label>
+          </p>
+          <p>
+            <label>
+              Veröffentlichung:
+              <input type="date" name="date" required />
+            </label>
+          </p>
+          <p>
+            Inhalt: <br />
             <input
-              type="text"
-              name="duration"
+              type="radio"
+              name="type"
+              value="text"
               required
-              placeholder="MM:SS"
-              value="00:20"
-              pattern="(00:[2-5][0-9]|0[1-9]:[0-5][0-9]|1[0-5]:[0-5][0-9])"
-              title="Bitte eine Dauer zwischen 00:20 und 15:59 im Format MM:SS eingeben."
-            />
-          </label>
-        </p>
-        <p>
-          <label>
-          Veröffentlichung:
-          <input type="date" name="date" required />
-          </label>
-        </p>
-        <p>
-          Inhalt: <br />
-          <input type="radio" name="type" value="text" required />Text-Tutorial
-          <input
-            type="radio"
-            name="type"
-            value="video"
-            required
-          />Video-Tutorial
-          <br />
-          <textarea
-            required
-            name="content"
-            placeholder="Inhalt des Tutorials"
-            rows="10"
-            cols="40"
-          ></textarea>
-        </p>
-      </fieldset>
-        <input type="submit" value="Erstellen" id="erstellen"/>
+              id="rad1"
+            />Text-Tutorial
+            <input
+              type="radio"
+              name="type"
+              value="video"
+              required
+              id="rad2"
+            />Video-Tutorial
+            <br />
+            <textarea
+              required
+              name="content"
+              placeholder="Inhalt des Tutorials"
+              rows="10"
+              cols="40"
+              id="content"
+            ></textarea>
+          </p>
+        </fieldset>
+        <input type="submit" value="Erstellen" id="erstellen" />
       </form>
     </div>
+    <script src="/assets/js/form.js"></script>
   </body>
 </html>

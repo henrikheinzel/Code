@@ -1,0 +1,49 @@
+<%- include('header') %>
+
+<div id="maincontainer">
+  <main>
+    <h2>Details zum Tutorial: <%= tutorial.name %></h2>
+    <p><strong>Beschreibung:</strong> <%= tutorial.beschreibung %></p>
+    <p><strong>Sprache:</strong> <%= tutorial.sprache %></p>
+    
+    <!-- FALLUNTERSCHEIDUNG: Video vs. Text -->
+    <% if (tutorial.embededCode && tutorial.embededCode !== "") { %>
+      
+      <h3>Video ansehen</h3>
+      <div class="video-container">
+        <!-- Echtes HTML rendern mit Bindestrich -->
+        <%- tutorial.embededCode %> 
+      </div>
+      
+      <!-- Prüfen, ob die Kapitelliste Daten enthält -->
+      <% if (tutorial.kapitelliste && tutorial.kapitelliste.length > 0) { %>
+        <h3>Kapitel</h3>
+        <table>
+          <tr>
+            <th>Dauer</th>
+            <th>Kapitelname</th>
+            <th>Beschreibung</th>
+          </tr>
+          <% tutorial.kapitelliste.forEach(function(kap) { %>
+            <tr>
+              <td><%= kap.dauer %></td>
+              <td><%= kap.name %></td>
+              <td><%= kap.beschreibung %></td>
+            </tr>
+          <% }) %>
+        </table>
+      <% } %>
+
+    <% } else { %>
+      
+      <!-- Text-Tutorial -->
+      <h3>Zum Tutorial</h3>
+      <p>
+        Hier geht es zum vollständigen Beitrag: 
+        <a href="<%= tutorial.url %>" target="_blank"><%= tutorial.name %> lesen</a>
+      </p>
+
+    <% } %>
+  </main>
+
+<%- include('footer') %>

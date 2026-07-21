@@ -1,0 +1,25 @@
+<%- include('header') %>
+
+<div id="maincontainer">
+  <main>
+    <h2>Die Kategorien im Überblick</h2>
+    <!-- Dein Suchformular kann hier normal als HTML stehen bleiben -->
+    
+    <div id="container1">
+      <ol class="kachel-container">
+        <!-- HIER STARTET DIE DYNAMISCHE SCHLEIFE -->
+        <% kategorien.forEach(function(kat) { %>
+  <li class="kachel">
+    <a href="/tutorials?category=<%= kat.name %>">
+      <!-- kat.bild.url liefert jetzt z.B. "/img/CSS.png" -->
+      <!-- kat.bild.name liefert z.B. "CSS Logo" -->
+      <img src="<%= kat.bild.url %>" width="100" height="100" alt="<%= kat.bild.name %>" />
+    </a>
+    <a href="/tutorials?category=<%= kat.name %>"><%= kat.name %> Tutorials</a>
+  </li>
+<% }) %>
+      </ol>
+    </div>
+  </main>
+
+<%- include('footer') %>

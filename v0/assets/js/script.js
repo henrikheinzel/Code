@@ -123,15 +123,16 @@ tut2.fuegeKategorieHinzu(katJava);
 // Tutorials in einem Array verwalten
 let alleTutorials = [tut1, tut2];
 
-alleKategorien.sort((a, b) => {
-  return a.name.localeCompare(b.name); //das sortiert das ganze Array jetzt, mit Umlaut Beachtung (?) --- TESTEN!!!
-});
-
 function getTutorialsZuKategorie(kategorieName) {
   return alleTutorials.filter((tutorial) => {
     return tutorial.kategorien.some((kat) => kat.name === kategorieName);
   });
 }
+
+alleKategorien.sort((a, b) => {
+  return a.name.localeCompare(b.name); //das sortiert das ganze Array jetzt, mit Umlaut Beachtung (?) --- TESTEN!!!
+});
+
 
 for (let kategorie of alleKategorien) {
   let passendeTutorials = getTutorialsZuKategorie(kategorie.name);

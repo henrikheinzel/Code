@@ -1,0 +1,26 @@
+<%- include('header') %>
+
+<div id="maincontainer">
+  <main>
+    <!-- Der Name der Kategorie wird dynamisch aus der URL eingefügt -->
+    <h2>Tutorials der Kategorie: <%= kategorie %></h2>
+    
+    <!-- Falls es noch keine Tutorials für diese Kategorie gibt -->
+    <% if (tutorials.length === 0) { %>
+      <p>In dieser Kategorie gibt es aktuell noch keine Tutorials.</p>
+    <% } else { %>
+      <!-- Ansonsten iterieren wir durch die Liste -->
+      <ul>
+        <% tutorials.forEach(function(tut) { %>
+          <li>
+            <!-- Hier generieren wir den Link zur Detailseite des jeweiligen Tutorials -->
+            <a href="/tutorial?name=<%= tut.name %>"><%= tut.name %></a> 
+            (Dauer: <%= tut.dauer %>)
+          </li>
+        <% }) %>
+      </ul>
+    <% } %>
+
+  </main>
+
+<%- include('footer') %>
